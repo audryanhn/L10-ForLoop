@@ -591,12 +591,12 @@ function escCode(s) {
     .replace(/>/g, "&gt;")
     .replace(
       /\b(for|let|const|var|if|else|return|function)\b/g,
-      '<span class="kw">$1</span>',
+      `<span class='kw'>$1</span>`,
     )
-    .replace(/\b(console)\b/g, '<span class="fn">$1</span>')
-    .replace(/(".*?"|'.*?')/g, '<span class="str">$1</span>')
-    .replace(/\b(\d+)\b/g, '<span class="num">$1</span>')
-    .replace(/(\/\/[^\n]*)/g, '<span class="cmt">$1</span>');
+    .replace(/\b(console)\b/g, `<span class='fn'>$1</span>`)
+    .replace(/(".*?"|`.*?`)/g, `<span class='str'>$1</span>`)
+    .replace(/\b(\d+)\b/g, `<span class='num'>$1</span>`)
+    .replace(/(\/\/[^\n]*)/g, `<span class='cmt'>$1</span>`);
 }
 
 document.addEventListener("keydown", (e) => {
